@@ -12,6 +12,8 @@ const color2 = document.getElementById('picker-2')
 const split = document.getElementById('split')
 const gradient = document.getElementById('gradient')
 const execute = document.getElementById('execute')
+const surprise = document.getElementById('surprise')
+
 
 execute.addEventListener('click', generateGradient)
 
