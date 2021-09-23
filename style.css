@@ -18,7 +18,10 @@ body {
   flex-direction: column;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
-  background-color: #b5caf9;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* Thanks to @Yashvardhan for the blur! */
   padding: 2.5em;
   border-radius: 5px;
 }
@@ -41,8 +44,9 @@ input[type="color"] {
 .buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 7rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
 }
 
 .executeBTN {
@@ -50,11 +54,8 @@ input[type="color"] {
   margin-top: 1rem;
 }
 
-#execute {
-  /* border: 3px solid blue;
-  background-color: cornflowerblue;
-  color: black;
-  font-weight: bold; */
+#execute,
+#surprise {
   color: #ffffff;
   background-color: #3369ff;
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
@@ -62,6 +63,7 @@ input[type="color"] {
   padding: 0.35rem;
 }
 
-#execute:hover {
+#execute:hover,
+#surprise:hover {
   cursor: pointer;
 }

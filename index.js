@@ -16,12 +16,19 @@ const surprise = document.getElementById('surprise')
 
 
 execute.addEventListener('click', generateGradient)
+surprise.addEventListener('click', generateSurprise)
+
 
 function generateGradient() {
-    console.log(color1.value)
-    console.log(split)
-    // document.body.style.background = `linear-gradient(${color1.value}, ${split.value}, ${color2.value})`;
     document.body.style.background = `linear-gradient(.25turn, ${color1.value}, ${split.value}%, ${color2.value})`
+}
+
+
+function generateSurprise() {
+    const randomColor1 = Math.floor(Math.random() * 16777215).toString(16)
+    const randomColor2 = Math.floor(Math.random() * 16777215).toString(16)
+    const randomSplit = Math.floor(Math.random() * 100)
+    document.body.style.background = `linear-gradient(.25turn, #${randomColor1}, ${randomSplit}%, #${randomColor2})`
 }
 
 
